@@ -165,7 +165,7 @@
 
     <!-- 普通的maven打包方式 -->
     <build>
-        <defaultGoal>compile</defaultGoal>
+        <!--<defaultGoal>compile</defaultGoal>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
