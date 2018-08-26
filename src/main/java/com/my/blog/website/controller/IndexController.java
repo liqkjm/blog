@@ -85,6 +85,24 @@ public class IndexController extends BaseController {
     }
 
     /**
+     * 博客页，类似原来的首页
+     *
+     * @return
+     */
+    @GetMapping(value = {"/blog"})
+    public String blog(HttpServletRequest request, @RequestParam(value = "limit", defaultValue = "12") int limit) {
+        int p = 1;
+        // p = p < 0 || p > WebConst.MAX_PAGE ? 1 : p;
+        PageInfo<ContentVo> articles = contentService.getContents(p, limit);
+        request.setAttribute("articles", articles);
+        if (p > 1) {
+            this.title(request, "第" + p + "页");
+        }
+        return this.render("blog");
+        // return this.index(request, 1, limit);
+    }
+
+    /**
      * 文章页
      *
      * @param request 请求
