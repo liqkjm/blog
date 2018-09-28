@@ -26,7 +26,6 @@ public class BaseInterceptor implements HandlerInterceptor {
 
     @Resource
     private IUserService userService;
-
     private MapCache cache = MapCache.single();
 
     @Resource

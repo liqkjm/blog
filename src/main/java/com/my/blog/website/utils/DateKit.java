@@ -41,11 +41,14 @@ public class DateKit {
     }
 
     public static boolean isToday(Date date) {
-        Date now = new Date();
+        // Calendar today = Calendar.getInstance();
+        // int year = today.get(Calendar.YEAR);
+
+        // Date now = new Date();
         boolean result = true;
-        result &= date.getYear() == now.getYear();
-        result &= date.getMonth() == now.getMonth();
-        result &= date.getDate() == now.getDate();
+        // result &= date.getYear() == now.getYear();
+        // result &= date.getMonth() == now.getMonth();
+        // result &= date.getDate() == now.getDate();
         return result;
     }
 
